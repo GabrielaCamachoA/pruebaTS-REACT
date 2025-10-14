@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "fullname": "Gabriela Camacho",
+    "password": "123456",
+    "role": "admin",
+    "createdAt": "2025-10-14"
+  }
+]
