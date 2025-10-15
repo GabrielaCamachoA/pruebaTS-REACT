@@ -1,4 +1,4 @@
-// este archivo se encarga de hacer las peticiones HTTP a los productos
+// this file is responsible for making HTTP requests to products
 
 import axios from "axios";
 import { GETProduct } from "../types/GetProducts";

@@ -6,27 +6,27 @@
     "quantity": "1",
     "price": "15000",
     "category": "Ropa",
-    "img_url": "blob:http://localhost:5173/f71fef2f-d18e-4db1-928a-a0a131c7d5e1",
+    "img_url": "blob:http://localhost:5173/c6b9b1df-b271-4bd8-8c37-d6de24a2600e",
     "createdAt": "2025-10-14"
   },
   {
-    "id": 1760463590303,
-    "SKU": "B790",
+    "id": 2,
+    "SKU": "K765",
     "name_product": "Computador portatil",
     "quantity": "2",
-    "price": "20000",
+    "price": "15000",
     "category": "Electrónicos",
-    "img_url": "blob:http://localhost:5173/a74d020c-6cfc-4510-b3d8-223f38749ed8",
-    "createdAt": "2025-10-14T17:39:50.303Z"
+    "img_url": "blob:http://localhost:5173/457c95c8-4df1-4a35-a4b0-c3798890600a",
+    "createdAt": "2025-10-15T01:48:31.579Z"
   },
   {
-    "id": 1760463662728,
-    "SKU": "C389",
+    "id": 3,
+    "SKU": "R47887",
     "name_product": "Espejo",
-    "quantity": "3",
-    "price": "600000",
+    "quantity": "2",
+    "price": "20000",
     "category": "Hogar",
-    "img_url": "blob:http://localhost:5173/c53c9bdc-aa65-4464-9538-273f3b1aaec5",
-    "createdAt": "2025-10-14T17:41:02.728Z"
+    "img_url": "blob:http://localhost:5173/d2ce3d6f-874b-47f3-a208-4fa65e72f2ee",
+    "createdAt": "2025-10-15T01:49:17.793Z"
   }
 ]

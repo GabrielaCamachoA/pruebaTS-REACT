@@ -1,8 +1,8 @@
-// estas importaciones nos permiten majer los formularios y el tipo SubmitHandler, que nos permite tipar correctamente la función de envío.
+// These imports allow us to use the forms and the SubmitHandler type, which allows us to correctly type the submission function.
 import { useForm, SubmitHandler } from "react-hook-form"
 import { GETUsers } from "../types/GetUsers";
 
-// importamos la función que hará la solicitud al backend para autenticar al usuario
+// import the function that will make the request to the backend to authenticate the user
 import { loginRequest } from "../api/auth"
 import { useAuthStore } from "../store/authStore"
 import { useNavigate } from "react-router-dom";
@@ -10,14 +10,14 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const navigate = useNavigate();
 
-  // obtenemos la función setToken desde el store global (Zustand)
-  // esto nos permite guardar el token una vez que el login sea exitoso
+  // we get the setToken function from the global store (state)
+  // this allows us to save the token once the login is successful
   const setToken= useAuthStore(state => state.setToken)
 
-   // inicializamos el formulario con react-hook-form y lo tipamos con nuestros Inputs
-  // register: conecta los inputs con react-hook-form
-  // handleSubmit: maneja el evento de envío del formulario
-  // errors: guarda los mensajes de error de validación
+   // initialize the form with react-hook-form and type it with our inputs
+  // register: connect the inputs with react-hook-form
+  // handleSubmit: handle the form submission event
+  // errors: save the validation error messages
   const { register, handleSubmit, formState: { errors } } = useForm<GETUsers>()
   const onSubmit: SubmitHandler<GETUsers> = async (data) => {
     try {
@@ -25,7 +25,7 @@ export default function Login() {
 
       console.log("Login exitoso:", response.data)
 
-      //guardar el token en Zustand (esto lo persistirá en localStorage automáticamente)
+      //save the token in Zustand (this will automatically persist it in localStorage)
       setToken(response.data.token)
 
       navigate("/dashboard")

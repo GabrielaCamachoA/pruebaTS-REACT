@@ -1,5 +1,5 @@
-// estas imporaciones nos vana permitir crear un store y matener la persitencia de la sesión
-// aunque se recargue la pagina
+// These imports will allow us to create a store and maintain session persistence
+// even if the page is reloaded.
 
 import {create} from "zustand"
 import {persist} from "zustand/middleware"
@@ -9,8 +9,8 @@ type State={
 }
 
 type Actions={
-    setToken: (token:string) => void, // guarda un token y activa la sesión
-    logout: () => void; // borra el token y redirige al login
+    setToken: (token:string) => void, // save a token and activate the session
+    logout: () => void; // Delete the token and redirect to login
 }
 
 export const useAuthStore = create(persist<State & Actions>(
@@ -29,7 +29,7 @@ export const useAuthStore = create(persist<State & Actions>(
         localStorage.removeItem("auth");
       },
     }), {
-        // este es el nombre que se refleja en el localsotrage
+        // this is the name reflected in the localsotrage
     name: "auth"
 }
 ))

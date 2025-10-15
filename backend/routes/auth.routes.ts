@@ -3,6 +3,6 @@ import { login } from "../controllers/authLogin"
 
 const router = Router()
 
-// definimos la ruta que ejecutará el controlador de login
+//  define the path that the login controller will execute.
 router.post("/login", login)
 export default router

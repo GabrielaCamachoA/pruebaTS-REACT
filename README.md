@@ -52,13 +52,23 @@ export interface User {
 ```
 ### 1. Clone the Repository
 ```bash
+<<<<<<< HEAD
 git clone <(https://github.com/GabrielaCamachoA/pruebaTS-REACT)>
+=======
+git clone <https://github.com/GabrielaCamachoA/pruebaTS-REACT>
+>>>>>>> 300b3b3 (commits and update readme)
 cd <project_folder>
 
 ```
 ### 2. Install dependices
 ```bash
 npm i
+
+```
+### 3. Start the development server
+```bash
+npm run dev -> frontend
+npx ts-node app.ts -> backend
 
 ```
 ### Author

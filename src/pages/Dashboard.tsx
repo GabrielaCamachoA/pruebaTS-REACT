@@ -94,7 +94,7 @@ export default function Productos() {
       {/* FORMULARIO */}
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-6 rounded shadow">
         <label className="w-full border p-2 rounded bg-indigo-600 text-white text-center cursor-pointer hover:bg-indigo-700 transition">
-          Ingresa una imagen
+          Enter an image
           <input
             type="file"
             accept="image/*"
@@ -154,7 +154,7 @@ export default function Productos() {
           onChange={(e) => setFilterCategory(e.target.value)}
           className="border p-2 rounded w-1/2"
         >
-          <option value="">Todas las categorías</option>
+          <option value="">All categories</option>
           <option value="Electrónicos">Electrónicos</option>
           <option value="Ropa">Ropa</option>
           <option value="Hogar">Hogar</option>

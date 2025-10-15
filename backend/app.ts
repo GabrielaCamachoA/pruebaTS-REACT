@@ -1,4 +1,4 @@
-// este archivo es el encargado de comunicarse con el frontend y manejar las solicitudes que lleguen desde él.
+// This file is responsible for communicating with the frontend and handling requests coming from it.
 
 import express from "express";
 import productsRoutes from "./routes/products.routes";
@@ -7,11 +7,11 @@ import authRoutes from "./routes/auth.routes";
 import cors from "cors"
 
 const app = express()
-// utilizamos cors para permitir que el frontend (en localhost:5173) haga peticiones al backend
+// we use CORS to allow the frontend (at localhost:5173) to make requests to the backend.
 app.use(cors({
      origin: "http://localhost:5173"
 }))
-// esto permite que el servidor entienda datos en formato json
+// This allows the server to understand data in JSON format.
 app.use(express.json()); 
 app.use("/api", authRoutes)
 app.use("/api/products", productsRoutes);

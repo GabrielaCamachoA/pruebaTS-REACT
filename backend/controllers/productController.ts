@@ -2,21 +2,22 @@ import { Request, Response } from "express";
 import { readProduct, writeProduct } from "../services/productService";
 import { Product } from "../types/productInterface";
 
-// 6Obtener todos los productos
+// Get all products
 export const getProducts = async (req: Request, res: Response): Promise<void> => {
   const products: Product[] = await readProduct();
   res.json(products);
 };
 
-// Crear un nuevo producto
+// Create a new product
 export const createProduct = async (req: Request, res: Response): Promise<void> => {
   const products: Product[] = await readProduct();
   const skuExists = products.some(p => p.SKU === req.body.SKU);
   if (skuExists) {
     res.status(400).json({ message: "❌ El SKU ya existe" });
   }
+  const nextId = products.length + 1;
   const newProduct: Product = { 
-    id: Date.now(), 
+   id: nextId,
     ...req.body, 
     createdAt: new Date() 
   };
@@ -25,7 +26,7 @@ export const createProduct = async (req: Request, res: Response): Promise<void> 
   res.status(201).json(newProduct);
 };
 
-// Actualizar un producto existente
+// Update an existing product
 export const updateProduct = async (req: Request, res: Response): Promise<void> => {
   const products: Product[] = await readProduct();
   const index = products.findIndex(p => p.id === Number(req.params.id));
@@ -41,7 +42,7 @@ export const updateProduct = async (req: Request, res: Response): Promise<void> 
   res.json(products[index]);
 };
 
-//  Eliminar un producto
+//  Remove a producto
 export const deleteProduct = async (req: Request, res: Response): Promise<void> => {
   const products: Product[] = await readProduct();
   const filtered = products.filter(p => p.id === Number(req.params.id));

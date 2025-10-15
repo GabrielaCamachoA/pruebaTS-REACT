@@ -1,3 +1,4 @@
+// this file is responsible for making HTTP requests to users
 import axios from "axios";
 import { GETUsers } from "../types/GetUsers";
 
